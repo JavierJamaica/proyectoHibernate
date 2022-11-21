@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c76e03f8-1b6a-41b3-a4c2-7d8142bde633" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ventanas/ventanaProveedores.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ventanas/ventanaProveedores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoHibernateAd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoHibernateAd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPrincipal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaPrincipal.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaPrincipal.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaPrincipal.java" afterDir="false" />
@@ -46,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "238",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Javier Jamaica/Documents/Intellij IDEA/Librerias/mysql-connector-java-8.0.23.jar",
+    "last_opened_file_path": "C:/Users/Javier Jamaica/Documents/Intellij IDEA/proyectoHibernate/proyectoHibernateAd/src/Ventanas",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +65,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Javier Jamaica\Documents\Intellij IDEA\proyectoHibernate\proyectoHibernateAd\src\Ventanas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Javier Jamaica\Documents\Intellij IDEA\proyectoHibernate\proyectoHibernateAd\src\Imagenes" />
     </key>
@@ -79,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669053493121</updated>
       <workItem from="1669053494746" duration="5172000" />
+      <workItem from="1669060538767" duration="3702000" />
     </task>
     <servers />
   </component>

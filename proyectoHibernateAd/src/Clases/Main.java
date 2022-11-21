@@ -15,8 +15,8 @@ public class Main {
         int height = pantalla.height;
         int width = pantalla.width;
 
-        JFrame frame = new JFrame("Principal");
-        frame.setLocation( width /3 , height/3 );
+        JFrame frame = new JFrame("Gestion Proyectos");
+        frame.setLocation(width / 3, height / 3);
         frame.setContentPane(new ventanaPrincipal().contenedorPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
