@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Clases.ProyectosEntity" table="proyectos" schema="proyectohibernate">
+        <id name="idproyectos">
+            <column name="idproyectos" sql-type="int"/>
+        </id>
+        <property name="nombreProyecto">
+            <column name="nombreProyecto" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="ciudad">
+            <column name="ciudad" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>
