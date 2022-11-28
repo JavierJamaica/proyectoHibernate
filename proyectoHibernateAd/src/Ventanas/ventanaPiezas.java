@@ -24,7 +24,15 @@ public class ventanaPiezas extends JFrame {
         modificarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new modificarPieza();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         crearButton.addActionListener(new ActionListener() {
@@ -44,7 +52,15 @@ public class ventanaPiezas extends JFrame {
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new eliminarPieza();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         buscarButton.addActionListener(new ActionListener() {
