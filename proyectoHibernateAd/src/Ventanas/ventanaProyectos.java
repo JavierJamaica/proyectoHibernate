@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
  * @author Javier Jamaica
  * 21/11/2022 - 21:14
  */
-public class ventanaProyectos {
+public class ventanaProyectos extends JFrame {
     private JButton atrasButton;
     private JButton crearButton;
     private JButton modificarButton;

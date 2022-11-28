@@ -1,14 +1,16 @@
 package Ventanas;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 /**
  * @author Javier Jamaica
  * 21/11/2022 - 21:14
  */
-public class ventanaGestion {
+public class ventanaGestion extends JFrame {
     public JPanel contenedorPrincipal;
     private JButton crearPedidoButton;
     private JButton calculosButton;
@@ -16,8 +18,9 @@ public class ventanaGestion {
     private JButton buscarPedidoButton;
     private JButton atrasButton;
 
-    public ventanaGestion(){
-
+    public ventanaGestion() {
+        setContentPane(contenedorPrincipal);
+        barra();
         crearPedidoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,11 +49,39 @@ public class ventanaGestion {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                JFrame frame = new JFrame("Gestion");
-                frame.setContentPane(new ventanaGestion().contenedorPrincipal);
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new ventanaPrincipal();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
-                frame.dispose();
+                frame.setVisible(true);
+                dispose();
+            }
+        });
+
+    }
+
+    public void barra() {
+        JMenuBar jMenuBar = new JMenuBar();
+        JMenu jMenu = new JMenu("Ayuda");
+        jMenu.setMnemonic(KeyEvent.VK_F);
+        jMenu.getAccessibleContext().setAccessibleDescription("Cosas");
+        jMenuBar.add(jMenu);
+        JMenuItem menuItem;
+        menuItem = new JMenuItem("Ayuda");
+        menuItem.setMnemonic(KeyEvent.VK_P);
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(
+                KeyEvent.VK_1, ActionEvent.ALT_MASK));
+        menuItem.getAccessibleContext().setAccessibleDescription(
+                "New Project");
+        jMenu.add(menuItem);
+        setJMenuBar(jMenuBar);
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Ni dios ni nadie puede ayudarte.");
             }
         });
     }

@@ -1,6 +1,7 @@
 package Ventanas;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,7 +9,7 @@ import java.awt.event.ActionListener;
  * @author Javier Jamaica
  * 21/11/2022 - 21:00
  */
-public class ventanaProveedores {
+public class ventanaProveedores extends JFrame {
     public JPanel contenedorPrincipal;
     private JButton crearButton;
     private JButton modificarButton;
@@ -17,6 +18,7 @@ public class ventanaProveedores {
     private JButton atrasButton;
 
     public ventanaProveedores() {
+        setContentPane(contenedorPrincipal);
         crearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,7 +46,15 @@ public class ventanaProveedores {
         atrasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new ventanaPrincipal();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
     }

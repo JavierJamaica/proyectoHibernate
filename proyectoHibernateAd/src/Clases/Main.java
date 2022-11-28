@@ -14,13 +14,12 @@ public class Main {
         Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
         int height = pantalla.height;
         int width = pantalla.width;
-
-        JFrame frame = new JFrame("Gestion Proyectos");
-        frame.setLocation(width / 3, height / 3);
-        frame.setContentPane(new ventanaPrincipal().contenedorPrincipal);
+        JFrame frame = new ventanaPrincipal();
+        frame.setLocation(width / 3, height / 4);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
     }
 
 }

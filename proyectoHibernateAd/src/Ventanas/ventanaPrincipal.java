@@ -6,12 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 /**
  * @author Javier Jamaica
  * 21/11/2022 - 18:59
  */
-public class ventanaPrincipal {
+public class ventanaPrincipal extends JFrame {
     public JPanel contenedorPrincipal;
     private JLabel logoLabel;
     private JButton salirButton;
@@ -26,6 +27,8 @@ public class ventanaPrincipal {
     private JLabel tituloGestion;
 
     public ventanaPrincipal() {
+        barra();
+        setContentPane(contenedorPrincipal);
         logoLabel.setSize(400, 180);
         ImageIcon imagen = new ImageIcon("src/Imagenes/logo1.png");
         Icon icon = new ImageIcon(imagen.getImage().getScaledInstance(logoLabel.getWidth(), logoLabel.getHeight(), Image.SCALE_DEFAULT));
@@ -43,12 +46,12 @@ public class ventanaPrincipal {
                 int height = pantalla.height;
                 int width = pantalla.width;
 
-                JFrame frame = new JFrame("Proveedores");
+                JFrame frame = new ventanaProveedores();
                 frame.setLocation(width / 3, height / 3);
-                frame.setContentPane(new ventanaProveedores().contenedorPrincipal);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
+                dispose();
             }
         });
         botonPiezas.addActionListener(new ActionListener() {
@@ -58,9 +61,8 @@ public class ventanaPrincipal {
                 int height = pantalla.height;
                 int width = pantalla.width;
 
-                JFrame frame = new JFrame("Piezas");
+                JFrame frame = new ventanaGestion();
                 frame.setLocation(width / 3, height / 3);
-                frame.setContentPane(new ventanaPiezas().contenedorPrincipal);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
@@ -73,9 +75,9 @@ public class ventanaPrincipal {
                 int height = pantalla.height;
                 int width = pantalla.width;
 
-                JFrame frame = new JFrame("Proyectos");
+                JFrame frame = new ventanaProyectos();
                 frame.setLocation(width / 3, height / 3);
-                frame.setContentPane(new ventanaProyectos().contenedorPrincipal);
+
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
@@ -87,19 +89,42 @@ public class ventanaPrincipal {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-
-                JFrame frame = new JFrame("Gestion");
+                JFrame frame = new ventanaGestion();
                 frame.setLocation(width / 3, height / 3);
-                frame.setContentPane(new ventanaGestion().contenedorPrincipal);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
+                dispose();
             }
         });
         salirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
+            }
+
+        });
+    }
+
+    public void barra() {
+        JMenuBar jMenuBar = new JMenuBar();
+        JMenu jMenu = new JMenu("Ayuda");
+        jMenu.setMnemonic(KeyEvent.VK_F);
+        jMenu.getAccessibleContext().setAccessibleDescription("Cosas");
+        jMenuBar.add(jMenu);
+        JMenuItem menuItem;
+        menuItem = new JMenuItem("Ayuda");
+        menuItem.setMnemonic(KeyEvent.VK_P);
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(
+                KeyEvent.VK_1, ActionEvent.ALT_MASK));
+        menuItem.getAccessibleContext().setAccessibleDescription(
+                "New Project");
+        jMenu.add(menuItem);
+        setJMenuBar(jMenuBar);
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Ni dios ni nadie puede ayudarte.");
             }
         });
     }
