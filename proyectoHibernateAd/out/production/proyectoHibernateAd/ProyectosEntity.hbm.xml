@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Clases.ProyectosEntity" table="proyectos" schema="proyectohibernate">
+    <class name="Entidades.ProyectosEntity" table="proyectos" schema="proyectohibernate">
         <id name="idproyectos">
             <column name="idproyectos" sql-type="int"/>
         </id>

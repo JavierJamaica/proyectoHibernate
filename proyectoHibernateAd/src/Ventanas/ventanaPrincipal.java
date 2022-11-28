@@ -34,7 +34,7 @@ public class ventanaPrincipal extends JFrame {
         Icon icon = new ImageIcon(imagen.getImage().getScaledInstance(logoLabel.getWidth(), logoLabel.getHeight(), Image.SCALE_DEFAULT));
         logoLabel.setIcon(icon);
 
-        logo2.setSize(149, 149);
+        logo2.setSize(149, 160);
         ImageIcon imagen2 = new ImageIcon("src/Imagenes/logo2.png");
         Icon icon2 = new ImageIcon(imagen2.getImage().getScaledInstance(logo2.getWidth(), logo2.getHeight(), Image.SCALE_DEFAULT));
         logo2.setIcon(icon2);
@@ -45,7 +45,6 @@ public class ventanaPrincipal extends JFrame {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-
                 JFrame frame = new ventanaProveedores();
                 frame.setLocation(width / 3, height / 3);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -60,12 +59,12 @@ public class ventanaPrincipal extends JFrame {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-
-                JFrame frame = new ventanaGestion();
+                JFrame frame = new ventanaPiezas();
                 frame.setLocation(width / 3, height / 3);
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
+                dispose();
             }
         });
         botonProyectos.addActionListener(new ActionListener() {
@@ -74,13 +73,12 @@ public class ventanaPrincipal extends JFrame {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-
                 JFrame frame = new ventanaProyectos();
                 frame.setLocation(width / 3, height / 3);
-
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
+                dispose();
             }
         });
         botonGestion.addActionListener(new ActionListener() {

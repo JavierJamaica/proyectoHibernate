@@ -1,4 +1,4 @@
-package Clases;
+package Entidades;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

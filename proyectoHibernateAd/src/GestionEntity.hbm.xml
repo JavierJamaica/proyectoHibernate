@@ -4,8 +4,8 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Clases.GestionEntity" table="gestion" schema="proyectohibernate">
-        <composite-id mapped="true" class="Clases.GestionEntityPK">
+    <class name="Entidades.GestionEntity" table="gestion" schema="proyectohibernate">
+        <composite-id mapped="true" class="Entidades.GestionEntityPK">
             <key-property name="codProveedor">
                 <column name="codProveedor" sql-type="int"/>
             </key-property>
