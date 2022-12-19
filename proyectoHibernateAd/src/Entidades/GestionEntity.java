@@ -8,51 +8,55 @@ import javax.persistence.*;
  */
 @Entity
 @IdClass(GestionEntityPK.class)
+@Table(name = "gestion", schema = "proyectohibernate")
+
 public class GestionEntity {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
     @Column(name = "codProveedor", nullable = false)
-    private int codProveedor;
+    private String codProveedor;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "codPieza", nullable = false)
-    private int codPieza;
+    private String codPieza;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "codProyecto", nullable = false)
-    private int codProyecto;
+    private String codProyecto;
     @Basic
-    @Column(name = "cantidad", nullable = false, precision = 0)
-    private float cantidad;
+    @Column(name = "cantidad", nullable = false)
+    private int cantidad;
 
-    public int getCodProveedor() {
+    public String getCodProveedor() {
         return codProveedor;
     }
 
-    public void setCodProveedor(int codProveedor) {
+    public void setCodProveedor(String codProveedor) {
         this.codProveedor = codProveedor;
     }
 
-    public int getCodPieza() {
+    public String getCodPieza() {
         return codPieza;
     }
 
-    public void setCodPieza(int codPieza) {
+    public void setCodPieza(String codPieza) {
         this.codPieza = codPieza;
     }
 
-    public int getCodProyecto() {
+    public String getCodProyecto() {
         return codProyecto;
     }
 
-    public void setCodProyecto(int codProyecto) {
+    public void setCodProyecto(String codProyecto) {
         this.codProyecto = codProyecto;
     }
 
-    public double getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 }

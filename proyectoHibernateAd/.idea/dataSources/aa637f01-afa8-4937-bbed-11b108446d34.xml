@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="ProyectoHibernate@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -999,44 +999,44 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="292" parent="288" name="codProveedor">
-      <DataType>int|0s</DataType>
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="293" parent="288" name="codPieza">
-      <DataType>int|0s</DataType>
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="294" parent="288" name="codProyecto">
-      <DataType>int|0s</DataType>
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="295" parent="288" name="cantidad">
-      <DataType>double|0s</DataType>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="296" parent="288" name="codProveedorFk">
+    <foreign-key id="296" parent="288" name="FkCodProveedor">
       <ColNames>codProveedor</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>idProveedores</RefColNames>
       <RefTableName>proveedores</RefTableName>
     </foreign-key>
-    <foreign-key id="297" parent="288" name="codPiezaFk">
+    <foreign-key id="297" parent="288" name="FkCodPieza">
       <ColNames>codPieza</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>idPiezas</RefColNames>
       <RefTableName>piezas</RefTableName>
     </foreign-key>
-    <foreign-key id="298" parent="288" name="codProyectoFk">
+    <foreign-key id="298" parent="288" name="FkCodProyecto">
       <ColNames>codProyecto</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
-      <RefColNames>idproyectos</RefColNames>
+      <RefColNames>idProyectos</RefColNames>
       <RefTableName>proyectos</RefTableName>
     </foreign-key>
     <index id="299" parent="288" name="PRIMARY">
@@ -1046,107 +1046,100 @@ codProyecto</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="300" parent="288" name="codProveedorFk_idx">
-      <ColNames>codProveedor</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="301" parent="288" name="codPiezaFk_idx">
+    <index id="300" parent="288" name="FkCodPieza_idx">
       <ColNames>codPieza</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="302" parent="288" name="codProyectoFk_idx">
+    <index id="301" parent="288" name="FkCodProyecto_idx">
       <ColNames>codProyecto</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="303" parent="288" name="PRIMARY">
+    <key id="302" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="304" parent="289" name="idPiezas">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>int|0s</DataType>
+    <column id="303" parent="289" name="idPiezas">
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="305" parent="289" name="nombrePieza">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="304" parent="289" name="nombrePieza">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="306" parent="289" name="precioPieza">
-      <DataType>double|0s</DataType>
+    <column id="305" parent="289" name="precioPieza">
+      <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="307" parent="289" name="descripcionPieza">
-      <DataType>varchar(80)|0s</DataType>
+    <column id="306" parent="289" name="descripcionPieza">
+      <DasType>varchar(80)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="308" parent="289" name="PRIMARY">
+    <index id="307" parent="289" name="PRIMARY">
       <ColNames>idPiezas</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="309" parent="289" name="PRIMARY">
+    <key id="308" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="310" parent="290" name="idProveedores">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>int|0s</DataType>
+    <column id="309" parent="290" name="idProveedores">
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="311" parent="290" name="nombreProv">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="310" parent="290" name="nombreProv">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="312" parent="290" name="apellidosProv">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="311" parent="290" name="apellidosProv">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="313" parent="290" name="direccionPostal">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="312" parent="290" name="direccionPostal">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="314" parent="290" name="PRIMARY">
+    <index id="313" parent="290" name="PRIMARY">
       <ColNames>idProveedores</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="315" parent="290" name="PRIMARY">
+    <key id="314" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="316" parent="291" name="idproyectos">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>int|0s</DataType>
+    <column id="315" parent="291" name="idProyectos">
+      <DasType>varchar(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="317" parent="291" name="nombreProyecto">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="316" parent="291" name="nombre">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="318" parent="291" name="ciudad">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="317" parent="291" name="ciudad">
+      <DasType>varchar(45)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="319" parent="291" name="PRIMARY">
-      <ColNames>idproyectos</ColNames>
+    <index id="318" parent="291" name="PRIMARY">
+      <ColNames>idProyectos</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="320" parent="291" name="PRIMARY">
+    <key id="319" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

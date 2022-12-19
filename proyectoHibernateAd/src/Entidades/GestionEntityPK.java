@@ -1,9 +1,6 @@
 package Entidades;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,41 +8,40 @@ import java.util.Objects;
  * @author Javier Jamaica
  * 21/11/2022 - 20:20
  */
+@Table(name = "gestion", schema = "proyectohibernate")
+
 public class GestionEntityPK implements Serializable {
     @Column(name = "codProveedor", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codProveedor;
+    private String codProveedor;
     @Column(name = "codPieza", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codPieza;
+    private String codPieza;
     @Column(name = "codProyecto", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codProyecto;
+    private String codProyecto;
 
-    public int getCodProveedor() {
+    public String getCodProveedor() {
         return codProveedor;
     }
 
-    public void setCodProveedor(int codProveedor) {
+    public void setCodProveedor(String codProveedor) {
         this.codProveedor = codProveedor;
     }
 
-    public int getCodPieza() {
+    public String getCodPieza() {
         return codPieza;
     }
 
-    public void setCodPieza(int codPieza) {
+    public void setCodPieza(String codPieza) {
         this.codPieza = codPieza;
     }
 
-    public int getCodProyecto() {
+    public String getCodProyecto() {
         return codProyecto;
     }
 
-    public void setCodProyecto(int codProyecto) {
+    public void setCodProyecto(String codProyecto) {
         this.codProyecto = codProyecto;
     }
 

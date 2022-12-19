@@ -1,5 +1,6 @@
 package Clases;
 
+import Entidades.GestionEntity;
 import Entidades.PiezasEntity;
 import Entidades.ProveedoresEntity;
 import Entidades.ProyectosEntity;
@@ -416,6 +417,26 @@ public class Funciones {
         tx.commit();
         session.close();
         return listaPr;
+    }
+
+    public static int crearGestion(GestionEntity gestion) {
+
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+        try {
+            session.save(gestion);
+            tx.commit();
+            session.close();
+            return 0;
+        } catch (HibernateException e) {
+            System.out.println(e);
+            session.close();
+            return 1;
+        } catch (PersistenceException e) {
+            return 2;
+        }
     }
 
 

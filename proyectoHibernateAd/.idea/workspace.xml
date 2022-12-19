@@ -5,25 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c76e03f8-1b6a-41b3-a4c2-7d8142bde633" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa637f01-afa8-4937-bbed-11b108446d34.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aa637f01-afa8-4937-bbed-11b108446d34.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Funciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Funciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProyectosEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProyectosEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarProveedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarProveedor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntityPK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntityPK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaGestion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/Funciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Funciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/ProyectosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/ProyectosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableModels/TableModelProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableModels/TableModelProyecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/eliminarProveedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/eliminarProveedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaProyectos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/verProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/verProyectos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/GestionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/GestionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/GestionEntityPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/GestionEntityPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaGestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaGestion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowRun.ShowToolbar": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "214",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "238",
     "WebServerToolWindowFactoryState": "false",
@@ -135,5 +134,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/proyectoHibernateAd$Main.ic" NAME="Main Coverage Results" MODIFIED="1671464557557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Clases.*</FILTER>
+    </SUITE>
   </component>
 </project>
