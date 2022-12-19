@@ -22,7 +22,7 @@ public class GestionEntity {
     private int codProyecto;
     @Basic
     @Column(name = "cantidad", nullable = false, precision = 0)
-    private double cantidad;
+    private float cantidad;
 
     public int getCodProveedor() {
         return codProveedor;

@@ -14,7 +14,7 @@ public class ProyectosEntity {
     @Column(name = "idproyectos", nullable = false)
     private String idproyectos;
     @Basic
-    @Column(name = "nombreProyecto", nullable = false, length = 45)
+    @Column(name = "nombre", nullable = false, length = 45)
     private String nombreProyecto;
     @Basic
     @Column(name = "ciudad", nullable = false, length = 45)

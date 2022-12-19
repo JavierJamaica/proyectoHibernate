@@ -6,31 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="c76e03f8-1b6a-41b3-a4c2-7d8142bde633" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Funciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Clases/Funciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProveedoresEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProveedoresEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProyectosEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/ProyectosEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarProveedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarProveedor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProveedores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/verPiezas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/verPiezas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaProyectos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/Funciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Funciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entidades/ProveedoresEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/ProveedoresEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entidades/ProyectosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/ProyectosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableModels/TableModelProveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableModels/TableModelProveedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/crearPieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/crearPieza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/crearProveedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/crearProveedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/crearProveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/crearProveedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaProveedores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaProveedores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TableModels/TableModelProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableModels/TableModelProyecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/eliminarProveedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/eliminarProveedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaProyectos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/verProyectos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/verProyectos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

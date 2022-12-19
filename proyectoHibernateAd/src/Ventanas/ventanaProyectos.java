@@ -24,25 +24,57 @@ public class ventanaProyectos extends JFrame {
         modificarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new modificarProyecto();
+                frame.setLocation(width / 3, height / 4);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         crearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new crearProyecto();
+                frame.setLocation(width / 3, height / 4);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new eliminarProyecto();
+                frame.setLocation(width / 3, height / 4);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new verProyectos();
+                frame.setLocation(width / 3, height / 4);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         atrasButton.addActionListener(new ActionListener() {
