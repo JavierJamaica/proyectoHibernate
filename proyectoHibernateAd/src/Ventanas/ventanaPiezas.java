@@ -66,7 +66,15 @@ public class ventanaPiezas extends JFrame {
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new verPiezas();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         atrasButton.addActionListener(new ActionListener() {

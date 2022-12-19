@@ -1,5 +1,8 @@
 package Ventanas;
 
+import Clases.Funciones;
+import Entidades.PiezasEntity;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,14 +15,14 @@ import java.awt.event.KeyEvent;
  */
 public class modificarPieza extends JFrame {
     private JPanel contenedorPrincipal;
-    private JComboBox comboId;
-    private JComboBox comboDatoModif;
-    private JSpinner precio;
     private JTextField textoNombre;
     private JTextArea textoDescripcion;
     private JButton atrasButton;
     private JButton modificarButton;
-    private JButton botonConfirmarDatoModif;
+    private JTextField id;
+    private JTextField nombre;
+    private JTextField desc;
+    private JTextField precio;
 
     public modificarPieza() {
         barra();
@@ -41,34 +44,51 @@ public class modificarPieza extends JFrame {
         modificarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (comprobarDatos(comboDatoModif, textoNombre, textoDescripcion, precio)) {
-                    System.out.println(textoNombre.getText() + textoDescripcion.getText() + precio.getValue());
+                try {
+                    PiezasEntity piezas = new PiezasEntity();
+                    if (comprobarDatos(id, nombre, desc, precio)) {
+                        ;
+                        if (!id.getText().equals("")) {
+                            piezas.setIdPiezas(id.getText());
+                            piezas.setNombrePieza(nombre.getText());
+
+                            piezas.setPrecioPieza(Double.parseDouble(precio.getText()));
+
+
+                            piezas.setDescripcionPieza(desc.getText());
+                            switch (Funciones.modificarPieza(piezas)) {
+                                case 0 ->
+                                        JOptionPane.showMessageDialog(null, "Se ha actualizado la pieza correctamente");
+                                case 1 ->
+                                        JOptionPane.showMessageDialog(null, "La pieza no existe", "Error", JOptionPane.ERROR_MESSAGE);
+                                case 2 ->
+                                        JOptionPane.showMessageDialog(null, "Error al actualizar en la BD", "Error BD", JOptionPane.ERROR_MESSAGE);
+                            }
+
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Se debe de introducir un codigo\n para poder modificar una pieza", "Codigo vacio", JOptionPane.WARNING_MESSAGE);
+                        }
+                        limpiarDatos();
+
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Los datos no pueden estar vacios", "Error", JOptionPane.WARNING_MESSAGE);
+
+                    }
+                } catch (NumberFormatException exception) {
+                    JOptionPane.showMessageDialog(null, "El precio tiene que ser un numero", "Error", JOptionPane.ERROR_MESSAGE);
+
                 }
             }
         });
-        botonConfirmarDatoModif.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                switch (comboDatoModif.getSelectedIndex()) {
-                    case 0 -> {
-                        precio.setVisible(false);
-                        textoDescripcion.setVisible(false);
-                        textoNombre.setVisible(true);
-                    }
-                    case 1 -> {
-                        modificarPieza.this.setSize(400,270);
-                        precio.setVisible(false);
-                        textoDescripcion.setVisible(true);
-                        textoNombre.setVisible(false);
-                    }
-                    case 2 -> {
-                        precio.setVisible(true);
-                        textoDescripcion.setVisible(false);
-                        textoNombre.setVisible(false);
-                    }
-                }
-            }
-        });
+
+    }
+
+    private void limpiarDatos() {
+        id.setText("");
+        nombre.setText("");
+        desc.setText("");
+        precio.setText("");
     }
 
     public void barra() {
@@ -94,28 +114,16 @@ public class modificarPieza extends JFrame {
         });
     }
 
-    public boolean comprobarDatos(JComboBox comboBoxEditor, JTextField textoNombre, JTextArea textoDescripcion, JSpinner precio) {
-        switch (comboBoxEditor.getSelectedIndex()) {
-            case 0:
-                if (textoNombre.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "El nombre no puede estar vacio", "Error!", JOptionPane.ERROR_MESSAGE);
-                    return false;
-                }
-                break;
-            case 1:
-                if (textoDescripcion.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "La descripcion no puede estar vacia", "Error!", JOptionPane.ERROR_MESSAGE);
-                    return false;
-                }
+    public boolean comprobarDatos(JTextField id, JTextField textoNombre, JTextField textoDescripcion, JTextField precio) {
+        if (id.getText().equals("") || textoDescripcion.getText().equals("") || textoNombre.getText().equals("") || precio.getText().equals("")) {
+            try {
+                Double.parseDouble(precio.getText());
+                return true;
+            } catch (NumberFormatException e) {
+                System.out.println("Errr");
+            }
 
-                break;
-            case 2:
-                if (Double.parseDouble(precio.getValue().toString()) == 0.0) {
-                    JOptionPane.showMessageDialog(null, "El precio debe ser mayor que 0!", "Error!", JOptionPane.ERROR_MESSAGE);
-                    return false;
-                }
-
-                break;
+            return false;
         }
 
         return true;

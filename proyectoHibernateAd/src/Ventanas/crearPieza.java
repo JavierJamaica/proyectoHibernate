@@ -1,11 +1,13 @@
 package Ventanas;
 
+import Clases.Funciones;
+import Entidades.PiezasEntity;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.text.DecimalFormat;
 
 /**
  * @author Javier Jamaica
@@ -18,6 +20,8 @@ public class crearPieza extends JFrame {
     private JButton atrasButton;
     private JButton crearPiezaButton;
     private JSpinner precio;
+    private JTextField id;
+    private JSpinner spinner1;
 
     public crearPieza() {
         setContentPane(contenedorPrincipal);
@@ -35,7 +39,20 @@ public class crearPieza extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (comprobarDatos(textoNombre, textoDescripcion, precio)) {
                     System.out.print(textoNombre.getText() + textoDescripcion.getText() + Double.parseDouble(precio.getValue().toString()));
+                    PiezasEntity pieza = new PiezasEntity();
+                    pieza.setIdPiezas(id.getText());
+                    pieza.setNombrePieza(textoNombre.getText());
+                    pieza.setDescripcionPieza(textoDescripcion.getText());
+                    pieza.setPrecioPieza(Double.parseDouble(precio.getValue().toString()));
+                    switch (Funciones.crearPieza(pieza)) {
+                        case 0 -> JOptionPane.showMessageDialog(null, "Se ha insertado la nueva pieza correctamente");
+                        case 1 ->
+                                JOptionPane.showMessageDialog(null, "Error de BD al insertar pieza", "Error insertar", JOptionPane.ERROR_MESSAGE);
+                        case 2 ->
+                                JOptionPane.showMessageDialog(null, "Ya existe una pieza con el mismo codigo", "Codigo duplicado", JOptionPane.ERROR_MESSAGE);
+                    }
                 }
+                limpiarDatos();
             }
         });
         atrasButton.addActionListener(new ActionListener() {
@@ -53,7 +70,12 @@ public class crearPieza extends JFrame {
             }
         });
     }
-
+    private void limpiarDatos() {
+    id.setText("");
+    precio.setValue(0);
+    textoDescripcion.setText("");
+    textoNombre.setText("");
+    }
     public void barra() {
         JMenuBar jMenuBar = new JMenuBar();
         JMenu jMenu = new JMenu("Ayuda");

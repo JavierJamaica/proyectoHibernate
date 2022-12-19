@@ -6,17 +6,52 @@
   <component name="ChangeListManager">
     <list default="true" id="c76e03f8-1b6a-41b3-a4c2-7d8142bde633" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/GestionEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/PiezasEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Entidades/PiezasEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/crearPieza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/eliminarPieza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/modificarPieza.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/Ventanas/ventanaPiezas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyectoHibernateAd/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyectoHibernateAd/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/GestionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/GestionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/PiezasEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entidades/PiezasEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PiezasEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProveedoresEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProyectosEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/crearPieza.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/crearPieza.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/crearPieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/crearPieza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/eliminarPieza.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/eliminarPieza.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/eliminarPieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/eliminarPieza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/modificarPieza.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/modificarPieza.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/modificarPieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/modificarPieza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaPiezas.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaPiezas.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ventanas/ventanaPiezas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ventanas/ventanaPiezas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +87,7 @@
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "214",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "238",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Javier Jamaica/Documents/Intellij IDEA/proyectoHibernate/proyectoHibernateAd/src/Ventanas",
+    "last_opened_file_path": "C:/Users/Javier Jamaica/Documents/Intellij IDEA/proyectoHibernate/proyectoHibernateAd/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,6 +106,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Javier Jamaica\Documents\Intellij IDEA\proyectoHibernate\proyectoHibernateAd\src" />
       <recent name="C:\Users\Javier Jamaica\Documents\Intellij IDEA\proyectoHibernate\proyectoHibernateAd\src\Ventanas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -79,6 +115,26 @@
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="Clases" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Clases.Main" />
+      <module name="proyectoHibernateAd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Clases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

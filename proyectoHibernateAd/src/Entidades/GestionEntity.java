@@ -7,10 +7,8 @@ import javax.persistence.*;
  * 21/11/2022 - 20:20
  */
 @Entity
-@Table(name = "gestion", schema = "proyectohibernate", catalog = "")
 @IdClass(GestionEntityPK.class)
 public class GestionEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "codProveedor", nullable = false)
     private int codProveedor;

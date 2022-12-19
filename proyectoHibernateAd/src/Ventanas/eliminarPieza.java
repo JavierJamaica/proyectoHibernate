@@ -1,5 +1,8 @@
 package Ventanas;
 
+import Clases.Funciones;
+import Entidades.PiezasEntity;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +15,9 @@ import java.awt.event.KeyEvent;
  */
 public class eliminarPieza extends JFrame {
     private JPanel contenedorPrincipal;
-    private JComboBox comboBox1;
     private JButton atrasButton;
     private JButton eliminarButton;
+    private JTextField id;
 
     public eliminarPieza() {
         setContentPane(contenedorPrincipal);
@@ -22,7 +25,21 @@ public class eliminarPieza extends JFrame {
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                PiezasEntity p = new PiezasEntity();
+                if (!id.getText().equals("")) {
+                    p.setIdPiezas(id.getText());
+                    switch (Funciones.borrarPieza(p)) {
+                        case 0 -> JOptionPane.showMessageDialog(null, "Se ha eliminado la pieza correctamente");
+                        case 1 ->
+                                JOptionPane.showMessageDialog(null, "Pieza no existe", "Error", JOptionPane.ERROR_MESSAGE);
+                        case 2 ->
+                                JOptionPane.showMessageDialog(null, "Error al eliminar en la BD", "Error BD", JOptionPane.ERROR_MESSAGE);
+                    }
 
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Se debe de introducir un codigo\n para poder eliminar una pieza", "Codigo vacio", JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
         atrasButton.addActionListener(new ActionListener() {
@@ -39,6 +56,11 @@ public class eliminarPieza extends JFrame {
                 dispose();
             }
         });
+    }
+
+    private void limpiarDatos() {
+        id.setText(""
+        );
     }
 
     public void barra() {
