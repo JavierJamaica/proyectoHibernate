@@ -7,8 +7,10 @@ import Entidades.ProveedoresEntity;
 import Entidades.ProyectosEntity;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
@@ -31,11 +33,19 @@ public class crearGestion extends JFrame {
     public crearGestion() {
         setContentPane(contenedorPrincipal);
         initCombox();
-
+barra();
         atras.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new ventanaGestion();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
             }
         });
         crear.addActionListener(new ActionListener() {
@@ -93,6 +103,28 @@ public class crearGestion extends JFrame {
         }
         DefaultComboBoxModel defaultComboBoxModel3 = new DefaultComboBoxModel(codigosFuncionesPiezas);
         pieza.setModel(defaultComboBoxModel3);
+    }
+    public void barra() {
+        JMenuBar jMenuBar = new JMenuBar();
+        JMenu jMenu = new JMenu("Ayuda");
+        jMenu.setMnemonic(KeyEvent.VK_F);
+        jMenu.getAccessibleContext().setAccessibleDescription("Cosas");
+        jMenuBar.add(jMenu);
+        JMenuItem menuItem;
+        menuItem = new JMenuItem("Ayuda");
+        menuItem.setMnemonic(KeyEvent.VK_P);
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(
+                KeyEvent.VK_1, ActionEvent.ALT_MASK));
+        menuItem.getAccessibleContext().setAccessibleDescription(
+                "New Project");
+        jMenu.add(menuItem);
+        setJMenuBar(jMenuBar);
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Ni dios ni nadie puede ayudarte.");
+            }
+        });
     }
 }
 

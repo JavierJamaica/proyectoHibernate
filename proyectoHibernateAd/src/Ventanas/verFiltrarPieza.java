@@ -26,6 +26,7 @@ public class verFiltrarPieza extends JFrame {
 
     public verFiltrarPieza() {
         setContentPane(contenedorPrincipal);
+        barra();
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,7 +56,7 @@ public class verFiltrarPieza extends JFrame {
     }
 
     public void barra() {
-        barra();
+
         JMenuBar jMenuBar = new JMenuBar();
         JMenu jMenu = new JMenu("Ayuda");
         jMenu.setMnemonic(KeyEvent.VK_F);
