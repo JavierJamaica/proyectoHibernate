@@ -1,6 +1,9 @@
 package Ventanas;
 
 import Clases.Funciones;
+import Entidades.PiezasEntity;
+import Entidades.ProveedoresEntity;
+import TableModels.TableModelPieza;
 import TableModels.TableModelProveedor;
 
 import javax.swing.*;
@@ -8,54 +11,47 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 /**
  * @author Javier Jamaica
- * 19/12/2022 - 15:26
+ * 19/12/2022 - 17:15
  */
-public class VerProveedor extends JFrame {
+public class verFiltrarProv extends JFrame {
     private JTable table1;
     private JButton atrasButton;
-    private JButton verButton;
-    private JPanel contendorPrincipal;
     private JButton buscarButton;
+    private JPanel contenedorPrincipal;
+    private JComboBox comboBox1;
+    private JTextField dato;
 
-    public VerProveedor() {
-        setContentPane(contendorPrincipal);
+    public verFiltrarProv() {
         barra();
+        setContentPane(contenedorPrincipal);
         atrasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-                JFrame frame = new ventanaProveedores();
+                JFrame frame = new VerProveedor();
                 frame.setLocation(width / 3, height / 3);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
                 dispose();
-            }
-        });
-        verButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                table1.setModel(new TableModelProveedor(Funciones.verProveedores()));
-
             }
         });
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
-                int height = pantalla.height;
-                int width = pantalla.width;
-                JFrame frame = new verFiltrarProv();
-                frame.setLocation(width / 3, height / 3);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-                dispose();
+                ArrayList<ProveedoresEntity> proveedoresEntities = Funciones.verProvFiltro(comboBox1.getSelectedItem().toString(),dato.getText());
+                if (proveedoresEntities.size()!=0){
+                    table1.setModel(new TableModelProveedor(proveedoresEntities));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "No hay datos con ese filtro", "Codigo duplicado", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
     }
@@ -82,5 +78,4 @@ public class VerProveedor extends JFrame {
             }
         });
     }
-
 }

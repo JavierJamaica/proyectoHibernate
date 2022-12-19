@@ -439,7 +439,72 @@ public class Funciones {
         }
     }
 
+    public static ArrayList<PiezasEntity> verPiezasFiltro(String campo, String filtro) {
+        ArrayList<PiezasEntity> listaPiezas = new ArrayList<PiezasEntity>();
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
 
+        filtro = "'%" + filtro.toLowerCase() + "%'";
+        for (Object value : session.createSQLQuery("SELECT * FROM piezas WHERE LOWER(" + campo + ") LIKE " + filtro + "").list()) {
+            Object[] tupla = (Object[]) value;
+            PiezasEntity p = new PiezasEntity();
+            p.setIdPiezas((String) tupla[0]);
+            p.setNombrePieza((String) tupla[1]);
+            p.setPrecioPieza(Double.parseDouble(tupla[2].toString()));
+            p.setDescripcionPieza((String) tupla[3]);
+            listaPiezas.add(p);
+        }
 
+        tx.commit();
+        session.close();
+        return listaPiezas;
+    }
+
+    public static ArrayList<ProveedoresEntity> verProvFiltro(String campo, String filtro) {
+        ArrayList<ProveedoresEntity> listaProv = new ArrayList<ProveedoresEntity>();
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        filtro = "'%" + filtro.toLowerCase() + "%'";
+        for (Object value : session.createSQLQuery("SELECT * FROM proveedores WHERE LOWER(" + campo + ") LIKE " + filtro + "").list()) {
+            Object[] tupla = (Object[]) value;
+            ProveedoresEntity p = new ProveedoresEntity();
+            p.setIdProveedores((String) tupla[0]);
+            p.setNombreProv((String) tupla[1]);
+            p.setApellidosProv((String) tupla[2]);
+            p.setDireccionPostal((String) tupla[3]);
+            listaProv.add(p);
+        }
+
+        tx.commit();
+        session.close();
+        return listaProv;
+    }
+
+    public static ArrayList<ProyectosEntity> verProyectosvFiltro(String campo, String filtro) {
+        ArrayList<ProyectosEntity> listaPro = new ArrayList<ProyectosEntity>();
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        filtro = "'%" + filtro.toLowerCase() + "%'";
+        for (Object value : session.createSQLQuery("SELECT * FROM proyectos WHERE LOWER(" + campo + ") LIKE " + filtro + "").list()) {
+            Object[] tupla = (Object[]) value;
+            ProyectosEntity p = new ProyectosEntity();
+            p.setIdproyectos((String) tupla[0]);
+            p.setNombreProyecto((String) tupla[1]);
+            p.setCiudad((String) tupla[2]);
+            listaPro.add(p);
+        }
+
+        tx.commit();
+        session.close();
+        return listaPro;
+    }
 
 }

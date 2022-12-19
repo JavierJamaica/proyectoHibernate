@@ -1,7 +1,6 @@
 package Ventanas;
 
 import Clases.Funciones;
-import TableModels.TableModelPieza;
 import TableModels.TableModelProyecto;
 
 import javax.swing.*;
@@ -18,7 +17,9 @@ public class verProyectos extends JFrame {
     private JTable table1;
     private JButton verButton;
     private JButton atrasButton;
-public verProyectos() {
+    private JButton buscarButton;
+
+    public verProyectos() {
     setContentPane(contenedorPrincipal);
     verButton.addActionListener(new ActionListener() {
         @Override
@@ -41,5 +42,19 @@ public verProyectos() {
             dispose();
         }
     });
-}
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new verFiltrarProyectos();
+                frame.setLocation(width / 3, height / 3);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
+            }
+        });
+    }
 }

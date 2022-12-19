@@ -1,56 +1,50 @@
 package Ventanas;
 
 import Clases.Funciones;
-import TableModels.TableModelProveedor;
+import Entidades.PiezasEntity;
+import TableModels.TableModelPieza;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author Javier Jamaica
- * 19/12/2022 - 15:26
+ * 19/12/2022 - 16:56
  */
-public class VerProveedor extends JFrame {
+public class verFiltrarPieza extends JFrame {
+    private JComboBox campo;
+    private JTextField dato;
+    private JButton buscarButton;
+    private JPanel contenedorPrincipal;
     private JTable table1;
     private JButton atrasButton;
-    private JButton verButton;
-    private JPanel contendorPrincipal;
-    private JButton buscarButton;
 
-    public VerProveedor() {
-        setContentPane(contendorPrincipal);
-        barra();
+    public verFiltrarPieza() {
+        setContentPane(contenedorPrincipal);
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ArrayList<PiezasEntity> piezasEntities = Funciones.verPiezasFiltro(campo.getSelectedItem().toString(),dato.getText());
+                if (piezasEntities.size()!=0){
+                    table1.setModel(new TableModelPieza(piezasEntities));
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "No hay datos con ese filtro", "Codigo duplicado", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
         atrasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
                 int height = pantalla.height;
                 int width = pantalla.width;
-                JFrame frame = new ventanaProveedores();
-                frame.setLocation(width / 3, height / 3);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setVisible(true);
-                dispose();
-            }
-        });
-        verButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                table1.setModel(new TableModelProveedor(Funciones.verProveedores()));
-
-            }
-        });
-        buscarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
-                int height = pantalla.height;
-                int width = pantalla.width;
-                JFrame frame = new verFiltrarProv();
+                JFrame frame = new verPiezas();
                 frame.setLocation(width / 3, height / 3);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
@@ -61,6 +55,7 @@ public class VerProveedor extends JFrame {
     }
 
     public void barra() {
+        barra();
         JMenuBar jMenuBar = new JMenuBar();
         JMenu jMenu = new JMenu("Ayuda");
         jMenu.setMnemonic(KeyEvent.VK_F);
@@ -82,5 +77,4 @@ public class VerProveedor extends JFrame {
             }
         });
     }
-
 }
