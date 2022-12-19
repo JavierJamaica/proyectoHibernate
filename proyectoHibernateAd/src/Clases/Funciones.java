@@ -419,6 +419,28 @@ public class Funciones {
         return listaPr;
     }
 
+    public static ArrayList<GestionEntity> verGestiones() {
+        ArrayList<GestionEntity> listaG = new ArrayList<GestionEntity>();
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        for (Object value : session.createSQLQuery("SELECT * FROM gestion ORDER BY codProveedor;").list()) {
+            Object[] tupla = (Object[]) value;
+            GestionEntity g = new GestionEntity();
+            g.setCodProveedor((String) tupla[0]);
+            g.setCodPieza((String) tupla[1]);
+            g.setCodProyecto((String) tupla[2]);
+            g.setCantidad((int) tupla[3]);
+            listaG.add(g);
+        }
+
+        tx.commit();
+        session.close();
+        return listaG;
+    }
+
     public static int crearGestion(GestionEntity gestion) {
 
         Configuration cfg = new Configuration().configure();

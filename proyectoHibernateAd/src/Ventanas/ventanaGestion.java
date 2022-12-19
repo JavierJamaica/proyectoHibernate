@@ -17,6 +17,7 @@ public class ventanaGestion extends JFrame {
     private JButton estadisticasButton;
     private JButton buscarPedidoButton;
     private JButton atrasButton;
+    private JButton verGestionesButton;
 
     public ventanaGestion() {
         setContentPane(contenedorPrincipal);
@@ -35,24 +36,9 @@ public class ventanaGestion extends JFrame {
                 dispose();
             }
         });
-        calculosButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
-        buscarPedidoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
-        estadisticasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-            }
-        });
         atrasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,6 +55,20 @@ public class ventanaGestion extends JFrame {
             }
         });
 
+        verGestionesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+                int height = pantalla.height;
+                int width = pantalla.width;
+                JFrame frame = new verGestion();
+                frame.setLocation(width / 3, height / 4);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     public void barra() {
