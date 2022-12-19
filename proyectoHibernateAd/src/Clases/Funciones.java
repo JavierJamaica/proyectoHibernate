@@ -1,6 +1,7 @@
 package Clases;
 
 import Entidades.PiezasEntity;
+import Entidades.ProveedoresEntity;
 import org.hibernate.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -13,6 +14,25 @@ import java.util.ArrayList;
  * 19/12/2022 - 13:54
  */
 public class Funciones {
+
+    public static int crearProveedor(ProveedoresEntity prov) {
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+        try {
+            session.save(prov);
+            tx.commit();
+            session.close();
+            return 0;
+        } catch (HibernateException e) {
+            session.close();
+            return 1;
+        } catch (PersistenceException e) {
+            return 2;
+        }
+    }
+
 
     public static int crearPieza(PiezasEntity pieza) {
         Configuration cfg = new Configuration().configure();
@@ -52,6 +72,70 @@ public class Funciones {
         return new PiezasEntity();
     }
 
+    public static ProveedoresEntity obtenerCodProveedor(String cod) {
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        ProveedoresEntity prov = new ProveedoresEntity();
+        try {
+            prov = (ProveedoresEntity) session.get(ProveedoresEntity.class, cod);
+            tx.commit();
+            session.close();
+            return prov;
+        } catch (ObjectNotFoundException ignored) {
+
+        }
+        tx.commit();
+        session.close();
+        return new ProveedoresEntity();
+    }
+
+    public static int modificarProv(ProveedoresEntity prov) {
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        ProveedoresEntity p;
+
+        try {
+            p = obtenerCodProveedor(prov.getIdProveedores());
+        } catch (Exception e) {
+            session.close();
+            return 1;
+        }
+        if (p != null) {
+
+            try {
+                if (!prov.getNombreProv().equals("")) {
+                    p.setNombreProv(prov.getNombreProv());
+                }
+
+                if (!prov.getApellidosProv().equals("")) {
+                    p.setApellidosProv(prov.getApellidosProv());
+                }
+
+                if (!prov.getDireccionPostal().equals("")) {
+                    p.setDireccionPostal(prov.getDireccionPostal());
+                }
+
+                session.update(p);
+                tx.commit();
+                session.close();
+                return 0;
+
+            } catch (Exception ignored) {
+            }
+            session.close();
+            return 2;
+        } else {
+            session.close();
+            return 1;
+        }
+    }
+
     public static int modificarPieza(PiezasEntity pieza) {
         Configuration cfg = new Configuration().configure();
         SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
@@ -69,7 +153,7 @@ public class Funciones {
         if (p != null) {
 
             try {
-                if (!p.getNombrePieza().equals("")) {
+                if (!pieza.getNombrePieza().equals("")) {
                     p.setNombrePieza(pieza.getNombrePieza());
                 }
 
@@ -86,6 +170,37 @@ public class Funciones {
                 session.close();
                 return 0;
 
+            } catch (Exception ignored) {
+            }
+            session.close();
+            return 2;
+        } else {
+            session.close();
+            return 1;
+        }
+    }
+
+    public static int borrarProveedor(ProveedoresEntity prov) {
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        ProveedoresEntity p;
+
+        try {
+            p = obtenerCodProveedor(prov.getIdProveedores());
+        } catch (Exception e) {
+            session.close();
+            return 1;
+        }
+        if (p != null) {
+
+            try {
+                session.delete(p);
+                tx.commit();
+                session.close();
+                return 0;
             } catch (Exception ignored) {
             }
             session.close();
@@ -147,6 +262,28 @@ public class Funciones {
         tx.commit();
         session.close();
         return listaP;
+    }
+
+    public static ArrayList<ProveedoresEntity> verProveedores() {
+        ArrayList<ProveedoresEntity> listaPr = new ArrayList<ProveedoresEntity>();
+        Configuration cfg = new Configuration().configure();
+        SessionFactory sessionFactory = cfg.buildSessionFactory(new StandardServiceRegistryBuilder().configure().build());
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+
+        for (Object value : session.createSQLQuery("SELECT * FROM proveedores ORDER BY idProveedores;").list()) {
+            Object[] tupla = (Object[]) value;
+            ProveedoresEntity pr = new ProveedoresEntity();
+            pr.setIdProveedores((String) tupla[0]);
+            pr.setNombreProv((String) tupla[1]);
+            pr.setApellidosProv((String) tupla[2]);
+            pr.setDireccionPostal((String) tupla[3]);
+            listaPr.add(pr);
+        }
+
+        tx.commit();
+        session.close();
+        return listaPr;
     }
 
 }

@@ -7,12 +7,12 @@ import javax.persistence.*;
  * 21/11/2022 - 20:20
  */
 @Entity
-@Table(name = "proveedores", schema = "proyectohibernate", catalog = "")
+@Table(name = "proveedores", schema = "proyectohibernate")
+
 public class ProveedoresEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idProveedores", nullable = false)
-    private int idProveedores;
+    private String idProveedores;
     @Basic
     @Column(name = "nombreProv", nullable = false, length = 45)
     private String nombreProv;
@@ -23,11 +23,11 @@ public class ProveedoresEntity {
     @Column(name = "direccionPostal", nullable = false, length = 45)
     private String direccionPostal;
 
-    public int getIdProveedores() {
+    public String getIdProveedores() {
         return idProveedores;
     }
 
-    public void setIdProveedores(int idProveedores) {
+    public void setIdProveedores(String idProveedores) {
         this.idProveedores = idProveedores;
     }
 

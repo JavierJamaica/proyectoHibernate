@@ -38,7 +38,6 @@ public class crearPieza extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (comprobarDatos(textoNombre, textoDescripcion, precio)) {
-                    System.out.print(textoNombre.getText() + textoDescripcion.getText() + Double.parseDouble(precio.getValue().toString()));
                     PiezasEntity pieza = new PiezasEntity();
                     pieza.setIdPiezas(id.getText());
                     pieza.setNombrePieza(textoNombre.getText());
